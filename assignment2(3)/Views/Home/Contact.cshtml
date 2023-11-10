@@ -1,0 +1,49 @@
+﻿@{
+    ViewBag.Title = "Contact";
+}
+
+
+<main aria-labelledby="title">
+    @*<h2 id="title">@ViewBag.Title.</h2>
+        <h3>@ViewBag.Message</h3>*@
+
+    <style>
+        body {
+            background-color: rgb(255,222,173);
+        }
+
+        .list {
+            text-align: center;
+            font-family: Comic Sans MS;
+            font-size: 20px;
+        }
+
+        
+    </style>
+    <h2 style="font-size: 50px; font-family: Monotype Corsiva; text-align: center; ">Information Feedback</h2>
+
+    <form class="list" action="mailto:1234567890@qq.com" method="post">
+        <label for="name">Name: </label><br>
+        <input type="text" id="name" name="name"><br>
+        <label for="inquiry">Message: </label><br>
+        <textarea id="inquiry" name="inquiry" rows="4" cols="50"></textarea><br>
+        <label for="feedback">Idea: </label><br>
+        <textarea id="feedback" name="feedback" rows="4" cols="50"></textarea><br><br>
+        @*<input type="submit" value="Submit" id="mybutton">
+            @Html.ActionLink("Submit", "Index", "Home", null, new { style = "background-color: #ffeabfd3; color: brown; padding: 10px 20px; text-align: center; text-decoration: none; display: inline-block; border-radius: 5px;" })
+        </form>*@
+        <input type="submit" value="Submit" style="border: 5px solid rgb(37, 149, 226); color: #28a745; background-color: transparent;
+color: brown;padding: 10px 20px; text-align: center; text-decoration: none; display: inline-block; border-radius: 5px;font-family: Cooper Black;font-size:20px;">
+    </form>
+    @*<form action="mailto:1234567890@qq.com" method="post">
+        <label for="inquiry" style="color: rgb(205, 113, 26); font-family: Segoe Script;font-size:40px;">Problem: </label><br>
+        <textarea id="inquiry" name="inquiry" rows="5" cols="50"></textarea><br>
+        <label for="feedback" style="color: rgb(205, 113, 26); font-family: Segoe Script;font-size:40px;">Idea: </label><br>
+        <textarea id="feedback" name="feedback" rows="5" cols="50"></textarea><br><br>
+        
+        <input type="submit" value="Submit" style="border: 5px solid rgb(37, 149, 226); color: #28a745; background-color: transparent;
+    color: brown;padding: 10px 20px; text-align: center; text-decoration: none; display: inline-block; border-radius: 5px;font-family: Cooper Black;font-size:20px;">
+    </form>*@
+
+    
+</main>

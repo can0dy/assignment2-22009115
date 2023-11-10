@@ -1,0 +1,95 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<main>
+    <div>
+        <form>
+            <input type="button" value="click" onclick="msg()" />
+        </form>
+    </div>
+
+    <section id="main">
+        <h1>Product innovation</h1>
+        <aside id="frame">
+            <div id="image2">
+                <img width="100%" height="300" alt="image19" src="~/Content/Images/image19.jpg" />
+            </div>
+        </aside>
+
+        <p>
+            Make trend predictions from multiple perspectives, including colors,
+            surface accessories, individual items, patterns, details, silhouettes,
+            planning, and combinations, to help designers grasp the future trend
+            direction and improve product innovation.
+        </p>
+    </section>
+    <div id="afterBrand">
+        <p>Advanced face, dressing with a sense of sophistication</p>
+    </div>
+
+    <section id="slider">
+        <br />
+        <h1>Product display</h1>
+
+        <aside>
+            <div>
+                <img alt="Cycle Pathology" src="~/Content/Images/image3.jpg" />
+                <img alt="Cycle Pathology" src="~/Content/Images/image4.jpg" />
+                <img alt="Cycle Pathology" src="~/Content/Images/image5.jpg" />
+                <img alt="Cycle Pathology" src="~/Content/Images/image6.jpg" />
+                <img alt="Cycle Pathology" src="~/Content/Images/image7.jpg" />
+                <img alt="Cycle Pathology" src="~/Content/Images/image8.jpg" />
+            </div>
+        </aside>
+
+        <p>
+            Products include women's clothing, men's clothing, children's
+            clothing, jewelry, shoes, and formal dresses.Every piece of
+            clothing is a thousand choices, and we ensure that the high-quality
+            products are presented to every customer
+        </p>
+
+
+    </section>
+
+    <section id="main2">
+        <h1>New product launch</h1>
+        <aside id="products">
+            <div id="images">
+
+                <img width="40" height="150" src="~/Content/Images/image10.jpg" alt="image10">
+                <img width="40" height="150" src="~/Content/Images/image11.jpg" alt="image11">
+                <img width="40" height="150" src="~/Content/Images/image12.jpg" alt="image12">
+                <img width="40" height="150" src="~/Content/Images/image13.jpg" alt="image13">
+                <img width="40" height="150" src="~/Content/Images/image14.jpg" alt="image14">
+                <img width="40" height="150" src="~/Content/Images/image15.jpg" alt="image15">
+                <img width="40" height="150" src="~/Content/Images/image16.jpg" alt="image16">
+                <img width="40" height="150" src="~/Content/Images/image17.jpg" alt="image17">
+                <img width="40" height="150" src="~/Content/Images/image8.jpg" alt="image8">
+                <img width="40" height="150" src="~/Content/Images/image5.jpg" alt="image5">
+                <img width="40" height="150" src="~/Content/Images/image9.jpg" alt="image9">
+                <img width="40" height="150" src="~/Content/Images/image20.jpg" alt="image20">
+            </div>
+        </aside>
+
+
+    </section>
+    <div>
+        <div class="page-trans">
+            @Html.ActionLink("Contact Us", "Contact", "Home", null, new
+       {
+           style = " margin-right:30px; text-decoration: none;color: rgb(133, 47, 158);font-size: 30px;font-family: Comic Sans MS; "
+       })
+        </div>
+        <div class="page-trans">
+            @Html.ActionLink("Learn More", "Index", "Categories", null, new
+       {
+           style = "text-align: center; text-decoration: none;color: rgb(133, 47, 158);font-size: 30px;font-family: Comic Sans MS; "
+       })
+        </div>
+        
+    </div>
+
+
+</main>

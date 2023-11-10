@@ -1,0 +1,291 @@
+﻿
+.body-content {
+    margin-top: 15px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+
+    div#topic {
+    top: 0;
+    left: 0;
+    height: 50px;
+    font-size: 25px;
+    font-family: Comic Sans MS; 
+    text-align: center;
+    background-color: rgb(188, 103, 103);
+}
+
+body {
+    background-color: rgb(255,231,186);
+}
+
+.navbar {
+    max-width: 100%;
+    background-color: rgb(255,231,186);
+    border-radius: 0px;
+    padding: 10px 50px;
+    margin-block-end: -15px;
+}
+
+
+/*body {
+    background-image: url('Images/background3.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    
+}*/
+/*div#imageLeft {
+    
+    margin-left: -13%;
+    width: 113%;
+}*/
+section#main {
+    clear: left;
+    float: left;
+    margin-left: 5px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+section h1 {
+    margin-left: 45%;
+    color: rgb(189, 131, 82);
+    font-size: 180%;
+    font-weight: normal;
+    letter-spacing: 5px;
+    
+}
+
+section#main aside {
+    border: 3px solid rgb(149, 91, 42);
+    color: rgb(149, 91, 42);
+    float: left;
+    margin: 10px;
+    width: 40%;
+    border-radius: 30px;
+}
+
+section#main aside div#image2 img {
+        border-radius: 30px;
+    }
+
+section#main p {
+    font-family: Harlow Solid Italic;
+    padding: 25px;
+    margin-top: 15px;
+    font-size: 20px;
+}
+
+div#afterBrand {
+    clear: left;
+    height: 35px;
+    font-family: Comic Sans MS;
+    font-size: 20px;
+    text-align: center;
+    background-color: rgb(188, 103, 103);
+}
+
+section#slider {
+    clear: left;
+    width: 100%;
+    height: 50%;
+    float: left;
+}
+
+section#slider h1 {
+        margin-left: 40%;
+        color: rgb(189, 131, 82);
+        font-size: 180%;
+        font-weight: normal;
+        letter-spacing: 5px;
+    }
+
+section#slider aside {
+        border: 1px solid white;
+        background-color: rgb(189, 131, 82);
+        margin: 1%;
+        float: left;
+        width: 40%;
+        text-align: center;
+        border-radius: 30px;
+    }
+
+
+section#slider aside div {
+            font-size: 100%;
+            border-radius: 30px;
+            white-space: nowrap;
+            overflow: hidden;
+            width: 100%;
+            height: 100%;
+        }
+
+section#slider aside div img {
+        width: 100%;
+        height: 100%;
+        animation: slide 20s linear infinite;
+        border-radius: 30px;
+        border: 3px solid rgb(149, 91, 42);
+    }
+
+.page1-imageGroup {
+    border-radius: 30px;
+    border: 3px solid rgb(149, 91, 42);
+}
+
+@keyframes slide {
+    0% {
+        transform: translateX(0);
+    }
+
+    16.66% {
+        transform: translateX(-100%);
+    }
+
+    33.33% {
+        transform: translateX(-200%);
+    }
+
+    50% {
+        transform: translateX(-300%);
+    }
+
+    66.66% {
+        transform: translateX(-400%);
+    }
+
+    83.33% {
+        transform: translateX(-500%);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}section#slider h1 {
+        margin-left: 45%;
+        color: rgb(189, 131, 82);
+        font-size: 180%;
+        font-weight: normal;
+        letter-spacing: 5px;
+    }
+
+section#slider p {
+    padding: 25px;
+    margin-top: 15px;
+    font-size: 20px;
+}
+
+
+
+section#main2 h1 {
+    margin-left: 30%;
+    color: rgb(189, 131, 82);
+    font-size: 180%;
+    font-weight: normal;
+    letter-spacing: 5px;
+    border: 2px solid rgb(188, 103, 103);
+    border-radius: 10px;
+    padding: 10px;
+    background-color: #e0f2f1;
+    display: inline-block;
+}
+
+
+div#images {
+    margin-left: 5%;
+    margin-top: 20px;
+    margin-bottom: 90px;
+    width: 100%;
+}
+
+
+
+    div#images img {
+        margin: 3%;
+        width: 15%;
+        border-radius: 30px;
+        border: 3px solid rgb(149, 91, 42);
+    }
+
+
+footer#contact {
+    
+    bottom: 0;
+    left: 0;
+    right: 0;
+    font-size:16px;
+    padding-left: 60px;
+    background-image: url('Images/background4.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+
+
+
+/*category*/
+
+
+.h2 {
+    font-size:150%;
+    border: 2px solid #00f; 
+    border-radius: 10px; 
+    padding: 10px; 
+    background-color: #e0f2f1;
+    display: inline-block;
+    font-family: Arial Black;
+    margin :15px;
+}
+
+.h3 {
+    font-size: 25px;
+    font-family: Comic Sans MS;
+}
+
+
+
+/*clothing*/
+
+
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+}
+
+    .pagination li {
+        margin: 5px;
+    }
+
+        .pagination li a {
+            display: block;
+            padding: 10px;
+            border: 2px solid #008080;
+            border-radius: 5px;
+        }
+
+.page-item a {
+    text-decoration: none;
+}
+.page-trans {
+    width:25%;
+    border: 3px solid rgb(149, 91, 42);
+    margin:20px;
+
+}

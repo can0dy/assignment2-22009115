@@ -1,0 +1,125 @@
+﻿@*@model IEnumerable<assignment2_3_.Models.Clothing>*@
+@model assignment2_3_.ViewModels.ClothingIndexViewModel
+@using PagedList.Mvc;
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2 class="displayClothing">Apparel display area</h2>
+
+<p style="font-family: UD Digi Kyokasho NP-B; color: #008080; font-size: 20px;">
+    @(String.IsNullOrWhiteSpace(Model.Search) ? "Showing all" : "You search for " + Model.Search + " found")
+    @Model.Clothings.TotalItemCount clothings
+</p>
+
+<p>
+    @using (Html.BeginForm("Index", "Clothings", FormMethod.Get))
+    {
+        <label style="font-family: UD Digi Kyokasho NP-B;color:#008080;font-size:20px;">Filter by category:</label>
+        @*@Html.DropDownList("Category", "All")*@
+        @Html.DropDownListFor(vm => vm.Category, Model.CatFilterItems, "All");
+        <input type="submit" value="Filter" style="font-family: UD Digi Kyokasho NP-B; color: #008080; font-size: 20px; background-color: rgb(168, 196, 206); border: dashed; border-radius: 10px;" />
+        <input type="hidden" name="Search" id="Search" value="@ViewBag.Search" />
+    }
+</p>
+
+<style>
+    .displayClothing {
+        font-size: 33px;
+        border: 2px dashed #008080; /* 设置2像素宽度的蓝色实线边框 */
+        border-radius: 10px; /* 设置圆角边框 */
+        padding: 10px; /* 设置内边距 */
+        background-color: #e0f2f1;
+        display: inline-block; /* 使标题元素以块级元素显示 */
+        font-family: Comic Sans MS;
+    }
+
+    .text-and-image {
+        margin-bottom: 20px; /* 添加下方间距 */
+    }
+
+        .text-and-image img {
+            max-width: 50%; /* 图片最大宽度为父元素的100% */
+            height: auto; /* 图片高度自适应 */
+            border-radius: 30px;
+        }
+
+    .grid-item {
+        text-align: center;
+        padding: 15px;
+        transition: transform 0.3s ease;
+        border: 1px solid #ccc;
+        border-radius: 30px;
+        background-color: #FFEFDB;
+    }
+
+    .col-md-1 {
+        border-radius: 30px;
+        width: 35%;
+    }
+
+    .col-md-2 {
+        border: 1px solid #ccc;
+        border-radius: 30px;
+        background-color: ghostwhite;
+        border: 2px solid black;
+        border-radius: 30px;
+        width: 40%;
+    }
+
+    .shuxing {
+        font-size: 20px;
+        color: burlywood;
+    }
+
+    .images {
+        text-align: center;
+        border-radius: 30px;
+        width: 50%;
+        height: 100%;
+    }
+</style>
+
+<body>
+    <div class="clothing">
+        @foreach (var item in Model.Clothings)
+        {
+
+            <div class="grid-item">
+                <div class="row" >
+                    <div class="col-md-1">
+                        @if (item.Name != null)
+                        {
+                            string imagePath = $"~/Content/Images/{item.Name.ToLower()}.jpg";
+                            <img class="images" src="@Url.Content(imagePath)" alt="@item.Name">
+                        }
+
+                    </div>
+                    <div class="col-md-2" >
+                        <p class="shuxing">
+
+                            @Html.DisplayFor(modelItem => item.Name)<br />￥
+                            @Html.DisplayFor(modelItem => item.Price)<br />
+                            @Html.DisplayFor(modelItem => item.Type)<br />
+                            @Html.ActionLink("Details", "Details", new { id = item.ID })
+                        </p>
+                    </div>
+                </div>
+            </div>
+        }
+
+    </div>
+    <div class="page-trans">
+        @Html.ActionLink("Back Home", "Index", "Home", null, new
+   {
+       style = "text-align: center; margin:30px; text-decoration: none;color: rgb(133, 47, 158);font-size: 30px;font-family: Comic Sans MS; "
+   })
+
+    </div>
+</body>
+
+<div style="font-family: UD Digi Kyokasho NP-B; color: #008080; font-size: 20px;">
+    Page@(Model.Clothings.PageCount <Model.Clothings.PageNumber ? 0 : Model.Clothings.PageNumber) of @Model.Clothings.PageCount
+    @Html.PagedListPager(Model.Clothings, page => Url.Action("Index", new { category = Model.Category, Search = Model.Search, page }), new PagedListRenderOptions { UlElementClasses = new string[] { "pagination" }, LiElementClasses = new string[] { "page-item" } })
+</div>
